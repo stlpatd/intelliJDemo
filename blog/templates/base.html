@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS 253 Blog</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a class="navLinks" href="/blog/?" class="main-title">
+                <h3>CS 253 Blog</h3>
+            </a>
+        </li>
+        <li>
+            <a class="navLinks" href="/blog/newpost">
+                <h3>Create Your Post</h3>
+            </a>
+        </li>
+    </ul>
+    <!-- <a class="navLinks" href= "/blog/newpost">-->
+
+    <div id="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+
+</html>
