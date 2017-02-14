@@ -57,7 +57,7 @@ class Post(db.Model):
     
 class BlogFront(BlogHandler):
     def get(self):
-        posts = db.GqlQuery("select * from Post order by created desc limit 10")
+        posts = db.GqlQuery("select * from Post order by created desc limit 5")
         self.render('front.html', posts = posts)
         
 class PostPage(BlogHandler):
@@ -85,7 +85,7 @@ class NewPost(BlogHandler):
         else:
             error = "subject and content, please!"
             self.render("newpost.html", subject=subject, content=content, error=error)
-
+    
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         template_values = {}

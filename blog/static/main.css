@@ -1,0 +1,59 @@
+body {
+    font-family: Verdana, 
+Optima;
+    margin-left: 5%;
+    background-color: #F2F5A9;
+}
+
+h2 {
+    font-weight: strong;
+    color: crimson;
+}
+
+.linkButtons {
+   float: right;
+   display: inline-block;
+}
+
+.navLinks {
+    color: blue;
+    display: inline-block;
+    padding-right: 20px;
+    margin-top: -20px;
+}
+
+.inputLabels {
+    display: table;
+    margin-bottom: 5px;
+    color: darkolivegreen;
+    font-size: 18px;
+}
+
+#contentBox {
+    width: 350px;
+    height: 350px;
+    clear: both;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.post {
+    padding: 5px 10px;
+    width: 600px;
+    border: 2px solid #FFFF00;
+    background-color: #F3F781;
+}
+
+.post-title {
+    color: fuchsia;
+    font-weight: 800;
+}
+
+.post-date {
+    font-size: 10px;
+}
+
+.post-content {
+    color: fuchsia;
+    font-weight: 800;
+}

@@ -1,13 +1,17 @@
 {% extends "base.html" %} {% block content %}
-<form method='post'>
+
     <h2>New Post</h2>
     <br>
-    <label>Subject</label>
+    <hr>
+    <br>
+    
+<form method='post'>
+    <label class='inputLabels'>Subject</label>
     <input type=(str( 'text')) name='subject'>
     <br>
     <br>
-    <label>Content</label>
-    <input type='text' name='content'>
+    <label class='inputLabels'>Content</label>
+    <textarea id='contentBox' type='text' name='content'></textarea>
     <br>
     <br>
     <input type='submit'>
