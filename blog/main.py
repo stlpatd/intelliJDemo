@@ -85,6 +85,11 @@ class NewPost(BlogHandler):
         else:
             error = "subject and content, please!"
             self.render("newpost.html", subject=subject, content=content, error=error)
+            
+class ViewPostHandler(BlogHandler):
+    def get(self, id):
+        a= Post.get_by_id(int(id))
+        self.render("permalink.html", post = a)
     
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -95,7 +100,8 @@ class MainHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/blog/?', BlogFront),
-    #('/blog/post', Post),
+    ('/blog/<id:\d+>', ViewPostHandler),
     ('/blog/([0-9]+)', PostPage),
     ('/blog/newpost', NewPost),
 ], debug=True)
+

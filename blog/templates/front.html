@@ -1,16 +1,16 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 {% block content %}
-<h2>Blogs</h2> 
+<h2>Blogs</h2>
 
 <br>
 <hr>
 <br>
-    
+
 {% for p in posts %}
 <div class="post">
     <div class=- "post-heading">
         <div class="post-title">
-            {{p.subject}}
+            <a href="/blog/{{p.key().id()}}">{{p.subject}}</a>
         </div>
 
         <div class="post-date">
@@ -23,5 +23,6 @@
     </div>
 </div>
 <br>
-<br> {% endfor %} 
+<br>
+{% endfor %} 
 {% endblock %}
